@@ -36,15 +36,6 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  def destroy
-    @product = Product.find(params[:id])
-    @product = product.delete
-    if @product.save
-        redirect_to admin_products_path
-    else
-        render :delete
-    end
-  end
 
   private
 
