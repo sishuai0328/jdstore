@@ -1,4 +1,5 @@
 <div class="row">
+<% if @products.present? %>
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
       <%= link_to product_path(product) do %>
@@ -16,5 +17,8 @@
         <%= link_to favorites_product_path(product), method: :post do %><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i><% end %>
       <% end %>
     </div>
+  <% end %>
+  <% else %>
+    <p> There are no products containing the"<%= params[:search] %>".</p>
   <% end %>
 </div>

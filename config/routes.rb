@@ -18,6 +18,9 @@ Rails.application.routes.draw do
       post :unfavorite
       post :add_to_cart
     end
+    collection do
+      get :search
+    end
   end
 
   resources :carts do
@@ -41,5 +44,5 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'products#index'
+  root 'welcome#index'
 end
