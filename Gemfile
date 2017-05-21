@@ -44,6 +44,7 @@ gem 'acts_as_list'
 gem 'letter_opener', group: :development
 gem 'aasm'
 gem 'ransack'
+gem 'rails-erd'
 
 
 group :development, :test do

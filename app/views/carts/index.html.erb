@@ -1,59 +1,132 @@
-<div class="row">
-  <div class="col-md-12">
-      <%= link_to("清空购物车", clean_carts_path, method: :delete, class: "pull-right", style: "text_decoration: underline;") %>
-      <h2>购物车</h2>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th colspan="2">商品资讯</th>
-            <th>单价</th>
-            <th>数量</th>
-            <th>操作选项</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% current_cart.cart_items.each do |cart_item| %>
-          <tr>
-            <td>
-              <%= link_to product_path(cart_item.product) do %>
-                <% if cart_item.product.image.present? %>
-                  <%= image_tag(cart_item.product.image.thumb.url, class: "thumbnail") %>
-                <% else %>
-                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-                <% end %>
-              <% end %>
-            </td>
-            <td>
-              <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
-            </td>
-            <td>
-              <%= cart_item.product.price %>
-            </td>
-            <td>
-              <%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
-                <%= f.select :quantity, 1..cart_item.product.quantity %>
-                <%= f.submit "更新", data: {disable_with: "Submiting..."} %>
-              <% end %>
-            </td>
-            <th>
-              <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
-                <i class="fa fa-trash"></i>
-              <% end %>
-            </th>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <div class="total clearfix">
-        <span class="pull-right">
-          <span>
-              总计 <%= render_cart_total_price(current_cart) %> RMB
-          </span>
-        </span>
-      </div>
-      <hr>
-      <div class="checkout clearfix">
-        <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
-      </div>
-  </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 cart-item-01 ">
+			<br>
+			<br>
+			<div class="panel-heading-cart">
+				<div class="panel-title-cart">
+					<div class="row">
+						<div class="col-md-12 col-xs-12">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+							Shopping Cart:
+							<% if current_cart.products.count > 1 %>
+							There are
+						<% else %>
+							There is
+							<% end %>
+							<span class="badge" style="background-color: #ff5722;font-size:14px;vertical-align:center;">
+								<%= current_cart.products.count %>
+							</span>
+							<% if current_cart.products.count > 1 %>
+							products in your Cart
+						<% else %>
+							product in your Cart.
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-info">
+
+				<div class="panel-heading">
+					<div class="panel-title">
+						<div class="row">
+							<div class="col-md-5 col-xs-5 ">
+								Product
+							</div>
+							<div class="col-md-2 col-xs-2  ">
+								Price
+							</div>
+							<div class="col-md-3 col-xs-3 ">
+								Quantity
+							</div>
+							<div class="col-md-2 col-xs-2 text-center">
+								Opeation
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<% current_cart.cart_items.each do |cart_item| %>
+					<div class="row">
+						<div class="col-xs-2">
+							<%= link_to product_path(cart_item.product) do %>
+							<% if cart_item.product.image.present? %>
+							<%= image_tag(cart_item.product.image.small.url) %>
+						<% else %>
+							<%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+							<% end %>
+							<% end %>
+						</div>
+						<div class="col-xs-3">
+							<div class="product-name-cart">
+								<%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<h6>
+								<strong>
+									$
+									<%= cart_item.product.price %>
+								</strong>
+							</h6>
+						</div>
+						<div class="col-xs-3 text-center update-item">
+							<div class="count-input ">
+								<%= link_to("-", remove_quantity_cart_item_path(cart_item.product_id), class: "incr-btn", method: :post) %>
+								<input class="quantity" type="text" value="<%= cart_item.quantity %>">
+								<%= link_to("+", add_quantity_cart_item_path(cart_item.product_id), class: "incr-btn", method: :post) %>
+							</div>
+						</div>
+
+					<div class="col-xs-2 text-center">
+						<%= link_to cart_item_path(cart_item.product_id), class: "cart-delete-item", method: :delete do %>
+						<i class="fa fa-trash"></i>
+						<% end %>
+					</div>
+				</div>
+				<hr>
+
+				<% end %>
+				<div class="row">
+					<div class="text-right">
+						<div class="col-xs-12 total-size">
+							Total:
+							<span class="total-price-item">$
+								<%= render_cart_total_price(current_cart) %>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<div class="row text-center">
+					<div class="col-xs-12">
+						<% if !current_user %>
+						<div class="checkout clearfix pull-right">
+							<div class="round-submit-cart">
+								<div>
+									<a class="round-submit-button-cart" data-toggle="modal" data-target="#login-modal">
+										Checkout</a>
+								</div>
+							</div>
+						</a>
+					</span>
+				</div>
+			<% else %>
+				<div class="round-submit-cart-pay">
+					<%= link_to("Checkout", checkout_carts_path, method: :post, class: "round-submit-button-cart-pay pull-right") %>
+				</div>
+
+				<div class="round-cancel-cart">
+					<%= link_to("Empty Cart", clean_carts_path, method: :delete, class: "round-cancel-button-cart pull-left", data: { confirm: "Are you sure you want to empty cart?"})%>
+				</div>
+
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
 </div>
