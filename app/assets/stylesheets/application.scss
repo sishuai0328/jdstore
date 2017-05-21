@@ -85,7 +85,7 @@
      img{
        margin-top: -23px;
        width:100%;
-       height:100%;
+       height:550px;
        background-repeat: no-repeat;   //背景不重复
         background-size: cover;
      }
@@ -95,4 +95,63 @@
  .tupian{
    width: 50px;
    height:50px;
+ }
+
+ /*===== login ====*/
+ .user_setup{
+     margin-top: -20px;
+     background-repeat: no-repeat;   //背景不重复
+      background-size: cover;
+     background-image: url(https://images.pexels.com/photos/113776/pexels-photo-113776.jpeg?w=940&h=650&auto=compress&cs=tinysrgb)
+ }
+
+ .user_setup_content{
+     background: #fff;
+     margin-top: 135px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     box-shadow: 1px 3px 5px #333;
+     border: 5px solid #666;
+     border-radius: 25px;
+
+     opacity:0.95;
+     filter:alpha(opacity=95);
+
+     h2{
+       text-align: center;
+     }
+
+     .psw{
+       float: right;
+       margin-top: -33px;
+       position: relative;
+     }
+
+     .account{
+       text-align: center;
+     }
+
+     .form-inputs{
+       margin-top: 25px;
+     }
+
+     .form-actions{
+       text-align: center;
+       margin-top: 35px;
+       margin-bottom: 25px;
+
+       .button{
+         color: #fff;
+         background-color: #4A6BB5;
+         border-color: #4A6BB5;
+         font-size: 16px;
+         letter-spacing: 1px;
+         width: 100%;
+       }
+       .button:hover{
+           background-color: #4A99B5;
+           border-color: #4A99B5;
+           color: #fff;
+       }
+     }
  }
