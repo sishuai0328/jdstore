@@ -1,7 +1,328 @@
-<footer class="text-center">
-  <div class="footer-below">
-      <p class="text-center">Copyright ©2017 Bookstore
-          <br>Design by SISH AND GongJS
-      </p>
-  </div>
-</footer>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOVE&GIFT</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            .fa-arrow-circle-up {
+                font-size: 35px;
+                text-align: center;
+                color: #666;
+            }
+            .fa-arrow-circle-up:hover {
+                font-size: 35px;
+                text-align: center;
+                color: #E61C64;
+                position: relative;
+            }
+            .top-line img {
+                text-align: center;
+                position: relative;
+                width: 100%;
+                opacity: 0.4;
+            }
+            ul {
+                list-style-type: none;
+                margin-left: 310px;
+                padding: 0;
+                overflow: hidden;
+            }
+            .nav-line li {
+                float: left;
+            }
+            .nav-line li a {
+                display: block;
+                color: #666;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 15px;
+                font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+                margin: 15px;
+            }
+            .nav-line li a:hover {
+                background-color: #E61C64;
+                border-radius: 5px;
+                color: #fff;
+                text-decoration: none;
+            }
+            .badge {
+                color: #fff;
+                background-color: #E61C64;
+            }
+            footer .footer-section {
+                display: block;
+                width: 100%;
+                height: 375px;
+                background: #E0E0E0;
+                margin-top: 0;
+            }
+            footer .footer-section .footer-content {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                max-width: 960px;
+                padding: 30px 0 0;
+                position: relative;
+                color: #333;
+            }
+            footer .footer-section .footer-content .contact-line-block {
+                float: right;
+                width: 33%;
+                padding: 50px 0 0;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block {
+                width: 380px;
+                margin: 0 auto;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .line {
+                padding-bottom: 50px;
+                display: block;
+                width: 380px;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .line .icon {
+                float: left;
+                width: 30px;
+                height: 30px;
+            }
+            #fa-comments-o {
+                font-size: 20px;
+                color: #666;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .line .link {
+                width: 300px;
+                float: left;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .line .link a {
+                color: #666;
+                font-size: 1em;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .line .link a:hover {
+                color: #E61C64;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .introduce {
+                width: 320px;
+                padding-bottom: 50px;
+                margin-left: -5px;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .introduce .img-block {
+                float: left;
+                width: 52px;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .introduce .img-block img {
+                width: 52px;
+            }
+            footer .footer-section .footer-content .contact-line-block .right-block .introduce .introduce-block {
+                color: #666;
+                text-align: left;
+                margin: 0;
+                float: left;
+                padding: 5px 0 0 8px;
+                width: 205px;
+            }
+            footer .footer-section .footer-content .des-block {
+                float: left;
+                width: 33%;
+                padding: 50px 0 0;
+            }
+            footer .footer-section .footer-content .des-block .column-block {
+                margin: 0 auto;
+            }
+            footer .footer-section .footer-content .des-block .column-block .column-center,
+            footer .footer-section .footer-content .des-block .column-block .column-left,
+            footer .footer-section .footer-content .des-block .column-block .column-right {
+                width: 33%;
+                float: left;
+                text-align: center;
+            }
+            footer .footer-section .footer-content .des-block .column-block .column-center .column-title,
+            footer .footer-section .footer-content .des-block .column-block .column-left .column-title,
+            footer .footer-section .footer-content .des-block .column-block .column-right .column-title {
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            footer .footer-section .footer-content .des-block .column-block .column-center li,
+            footer .footer-section .footer-content .des-block .column-block .column-left li,
+            footer .footer-section .footer-content .des-block .column-block .column-right li {
+                line-height: 23px;
+            }
+            footer .footer-section .footer-content .des-block .column-block .column-center a,
+            footer .footer-section .footer-content .des-block .column-block .column-left a,
+            footer .footer-section .footer-content .des-block .column-block .column-right a {
+                color: #666;
+                font-size: 1em;
+            }
+            footer .footer-section .footer-content .des-block .column-block .column-center a:hover,
+            footer .footer-section .footer-content .des-block .column-block .column-left a:hover,
+            footer .footer-section .footer-content .des-block .column-block .column-right a:hover {
+                color: #E61C64;
+            }
+            #list-unstyled {
+                margin: 0;
+            }
+            footer .footer-section .footer-content .fline {
+                padding-top: 40px;
+                margin: 0 auto;
+                width: 100%;
+                height: 1px;
+                border-bottom: 1px solid rgba(151,151,151,0.6);
+                clear: both;
+            }
+            footer .footer-section .footer-content .copyright-block {
+                width: 100%;
+                padding: 0 50px 50px;
+                display: block;
+                float: none;
+            }
+            footer .footer-section .footer-content .copyright-block .copyright-content .copyright-info {
+                padding-top: 10px;
+                color: #666;
+                float: none;
+                width: 100%;
+                text-align: left;
+            }
+            footer .footer-section .footer-content .wechat-block {
+                float: right;
+                width: 33%;
+                padding: 50px 0 0;
+                text-align: center;
+                margin: 0 8px 0 0;
+            }
+            footer .footer-section .footer-content .wechat-block .column-block {
+                margin: 0 auto;
+            }
+            footer .footer-section .footer-content .wechat-block .column-block .column-center {
+                width: 100%;
+                float: left;
+                text-align: center;
+            }
+            footer .footer-section .footer-content .wechat-block .column-block .column-center .column-title {
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            .wechat-img-block img {
+                width: 90px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- 以下是GoToTop line -->
+
+
+        <!-- 以下是footer -->
+        <div class="row">
+            <footer class="container-fluid">
+                <div class="row">
+                    <div class="footer-section">
+                        <div class="footer-content">
+                            <div class="contact-line-block">
+                                <div class="right-block">
+                                    <div class="line">
+                                        <div class="icon">
+                                            <i class="fa fa-comments-o fa-fw" id="fa-comments-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="link">
+                                            <a href="#">在线客服 ( 工作日 9:00-22:00 ）
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="introduce">
+                                        <div class="img-block">
+                                            <a href="#">
+                                                <img src="https://ww3.sinaimg.cn/large/006tNbRwly1fd8fp9e92hj30cz0bt40g.jpg"style="height:47px;margin-top:0px;"></a>
+                                        </div>
+                                        <div class="introduce-block">
+                                            <p>LOVE&GIFT，一家专注于为你提供创意送礼解决方案的商店。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="des-block">
+                                <div class="column-block">
+                                    <div class="column-left">
+                                        <ul class="list-unstyled" id="list-unstyled">
+                                            <li class="column-title">VIP会员</li>
+                                            <li>
+                                                <a href="#">会员政策</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">常见问题</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">支付方式</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">优惠劵使用</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="column-center">
+                                        <ul class="list-unstyled" id="list-unstyled">
+                                            <li class="column-title">配送方式</li>
+                                            <li>
+                                                <a href="#">配送范围</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">配送时间</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">配送收费</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">快递查询</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="column-right">
+                                        <ul class="list-unstyled" id="list-unstyled">
+                                            <li class="column-title">售后服务</li>
+                                            <li>
+                                                <a href="#">退换货物</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">退款申请</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">订单修改</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">发票出具</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wechat-block">
+                                <div class="column-block">
+                                    <div class="column-center">
+                                        <ul class="list-unstyled" id="list-unstyled">
+                                            <li class="column-title">微信客服</li>
+                                            <li class="wechat-img-block">
+                                                <img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fd8hmf9r6aj30by0bygme.jpg" style="height:90px;width:90px;margin-top:0px">
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fline"></div>
+                                <div class="copyright-block">
+                                    <div class="copyright-content">
+                                        <div class="copyright-info">
+                                            <p>任何问题，扫描微信二维码，联系在线客服。 工作时间：周一至周五9:00-22:00；周六、周日 10:00-18:00，法定节假日休息</p>
+                                            <p>Copyright © LOVE&GIFT 2017，All Rights Reserved</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
