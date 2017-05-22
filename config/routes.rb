@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "users/registrations" }
   namespace :admin do
     resources :products
     resources :orders do
@@ -35,6 +35,12 @@ Rails.application.routes.draw do
      resources :products
    end
 
+   resources :cart_items do
+     member do
+       post :add_quantity
+       post :remove_quantity
+     end
+   end
   resources :cart_items
   resources :orders do
     member do
