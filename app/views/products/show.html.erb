@@ -1,33 +1,34 @@
-
-
-	<div class="row">
-	<div class="container">
-				<div class=" col-md-6">
-
-            <div class="productDetail">
-            <div class="productDetail-left">
-              <div class="productDetail-left-bigImage">
-                <img src="https://ww4.sinaimg.cn/large/006tNc79gy1fd8at53f6wj30by0by76d.jpg" />
-              </div>
-              <div class="productDetail-left-imageList">
-                <div class="productDetail-left-imageList-item">
-                  <img src="https://ww4.sinaimg.cn/large/006tNc79gy1fd8at53f6wj30by0by76d.jpg" />
-                </div>
-                <div class="productDetail-left-imageList-item">
-                  <img src="https://ww1.sinaimg.cn/large/006tNc79gy1fd8atgi571j30by0byt9t.jpg" />
-                </div>
-                <div class="productDetail-left-imageList-item">
-                  <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fd8atkt1x5j30by0bywfp.jpg" />
-                </div>
-                <div class="productDetail-left-imageList-item">
-                  <img src="https://ww1.sinaimg.cn/large/006tNc79gy1fd8ato8u7nj30by0byq40.jpg" />
-                </div>
-                <div class="productDetail-left-imageList-item productDetail-left-imageList-lastItem">
-                  <img src="https://ww3.sinaimg.cn/large/006tNc79gy1fd8b42ustuj30bm0bnjsp.jpg" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="row">
+  <div class="col-md-6">
+    <% if @photos.present? %>
+       <% @photos.each_with_index do |p, index| %>
+         <% if index == 0 %>
+           <%= image_tag p.avatar.medium.url %>
+           <div style="letter-spacing: -8px">
+         <% else %>
+           <%= image_tag p.avatar.thumb.url %>
+         <% end %>
+       <% end %>
+       </div>
+     <% else %>
+         <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+     <% end %>
+  </div>
+  <div class="col-md-6">
+    <h2> <%= @product.title %> </h2>
+    <div style="height:100px;">
+      <p>
+        <%= @product.description %>
+      </p>
     </div>
+    <div> 数量 : <%= @product.quantity %> </div>
+    <div class="product-price"> ￥ <%= @product.price %> </div>
+    <div class="pull-right">
+      <% if @product.quantity.present? && @product.quantity >0 %>
+        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+      <% else %>
+        <p class="btn btn-primary btn-lg btn-danger">已销售一空，无法购买</p>
+      <% end %>
+    </div>
+  </div>
+</div>

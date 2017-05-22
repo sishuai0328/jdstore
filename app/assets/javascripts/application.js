@@ -10,12 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require bootstrap
+
 //= require jquery
 //= require jquery_ujs
-
+//= require turbolinks
 //= require jquery
-
+// = require bootstrap/alert
+// = require bootstrap/dropdown
 //= require_tree .
 
 $(document).on('mouseover', '.productDetail-left-imageList-item', function () {
