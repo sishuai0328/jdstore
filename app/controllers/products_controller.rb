@@ -1,7 +1,15 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @products = case params[:order]
+            when 'by_lower_bound'
+              Product.order('price DESC')
+            when 'by_upper_bound'
+              Product.order('price ASC')
+            else
+              Product.order('created_at DESC')              
+            end
+
     if params[:search]
       @products = Product.search(params[:search])
     end

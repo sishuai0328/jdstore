@@ -15,8 +15,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery
-// = require bootstrap/alert
-// = require bootstrap/dropdown
+//= require bootstrap/alert
+//= require bootstrap/dropdown
+//= require bootstrap-sprockets
 //= require_tree .
 
 $(document).on('mouseover', '.productDetail-left-imageList-item', function () {
