@@ -15,7 +15,14 @@
      <% end %>
   </div>
   <div class="col-md-6">
-    <h2> <%= @product.title %> </h2>
+    <h2> <%= @product.title %>
+      <!--收藏-->
+      <% if current_user && current_user.is_favorite_of?(@product) %>
+        <%= link_to unfavorite_product_path(@product), method: :post do %><i class="fa fa-heart fa-lg" aria-hidden="true"></i><% end %>
+      <% else %>
+        <%= link_to favorites_product_path(@product), method: :post do %><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i><% end %>
+      <% end %>
+    </h2>
     <div style="height:100px;">
       <p>
         <%= @product.description %>

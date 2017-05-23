@@ -47,7 +47,7 @@ end
     if @product.save
       if params[:photos] != nil
        params[:photos]['avatar'].each do |a|
-         @photo = @product.photoss.create(:avatar => a)
+         @photo = @product.photos.create(:avatar => a)
        end
      end
         redirect_to admin_products_path
@@ -61,6 +61,6 @@ end
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image)
+    params.require(:product).permit(:title, :category, :description, :quantity, :price, :image)
   end
 end
