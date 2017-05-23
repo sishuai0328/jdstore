@@ -18,10 +18,11 @@
 </div>
 <br>
 <hr>
-<div class="row">
-<% if @products.present? %>
+
+
+<div class='row'>
   <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
+    <div class='col-xs-12 col-sm-4 col-md-3 product-content'>
       <%= link_to product_path(product) do %>
         <% if product.image.present? %>
           <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -29,16 +30,10 @@
           <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
       <% end %>
-      <%= product.title %> ￥ <%= product.price %>
-      <!--收藏-->
-      <% if current_user && current_user.is_favorite_of?(product) %>
-        <%= link_to unfavorite_product_path(product), method: :post do %><i class="fa fa-heart fa-lg" aria-hidden="true"></i><% end %>
-      <% else %>
-        <%= link_to favorites_product_path(product), method: :post do %><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i><% end %>
-      <% end %>
+      <div class="product-info">
+        <p><%= link_to(product.title , product_path(product)) %></p>
+        <p>$ <%= product.price %></p>
+      </div>
     </div>
-  <% end %>
-  <% else %>
-    <p> There are no products containing the"<%= params[:search] %>".</p>
   <% end %>
 </div>

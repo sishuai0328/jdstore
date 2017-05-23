@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
             when 'by_upper_bound'
               Product.order('price ASC')
             else
-              Product.order('created_at DESC')              
+              Product.order('created_at DESC')
             end
 
     if params[:search]

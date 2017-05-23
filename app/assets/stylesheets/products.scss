@@ -1,3 +1,21 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ /* ===商品列表开始===  */
+.product-content {
+  img {
+    width: 100%;
+    margin: 7.5px auto 7.5px auto;
+  }
+
+  h2 {
+    margin-top: 150px;
+  }
+}
+
+.product-info {
+  text-align: left;
+  line-height: 14px;
+  min-height: 55px;
+}
