@@ -19,6 +19,12 @@
  @import "font-awesome";
 
 
+ body, html {
+     height: 100%;
+     line-height: 1.8em;
+     letter-spacing: 0.1em;
+     font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,STHeitiSC-Light,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+ }
  /* ===navbar开始===  */
  .navbar-default {
    border-radius: 0;
@@ -96,7 +102,65 @@
    width: 50px;
    height:50px;
  }
+/*===== welcome ====*/
+#head-section, #content-section-1, #content-section-2, #content-section-3 {
+	position: relative;
+	width: auto;
+	margin-top:-10px;
+	padding: 0;
+	display: block;
+  background-color: #eeeeee;
+}
+#content-section-1>.content-1 {
+	margin: 0 auto;
+	width: 690px;
+	text-align: center;
+	.group {
+		text-align: center;
+	}
 
+	p {
+		color: #666;
+	}
+
+	img {
+		width: 100%;
+	}
+
+}
+.short-line {
+    display: block;
+    background: #f96146;
+    border-style: none;
+    border-radius: 0;
+    margin: 20px auto 20px auto;
+    z-index: 53;
+    width: 200px;
+    height: 2px;
+    position: relative;
+}
+/*===== Show 首页-推荐商品 =====*/
+.show-box {
+  text-align: center;
+  padding: 50px 0 50px 0;
+
+  img {
+    width: 100%;
+  }
+
+  .box {
+	  margin-top: 15px;
+	  box-shadow: 1px 1px 1.5px #ccc;
+	}
+
+  .three {
+    margin-top: 12px;
+  }
+
+  .box:hover {
+    opacity: 0.85;
+  }
+}
 
  /*===== login ====*/
  .user_setup{
@@ -156,6 +220,7 @@
        }
      }
  }
+
 
  // car item 界面
 .cart-item-01 {
