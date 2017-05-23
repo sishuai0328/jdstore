@@ -156,6 +156,68 @@
       </div>
     </div>
   </section>
+   <!--==首页第二部分==-->
+  <div id="content-section-1" >
+  		<div class="content-1 jumbotron">
+  			<div class="group">
+  				<h2>让知识流动起来，你准备好了吗？</h2>
+  				<div class="short-line"></div>
+  			</div>
+  			<p>我们旨在为大学生打造一个全方位的二手书籍交易平台。在这里，买卖二手书籍将变得如此简单易行，麻麻再也不用担心我买不到书啦!</p>
+  			<%= image_tag("brain-mind.png") %>
+  		</div>
+  	</div>
+  <!--==首页第二部分==-->
+
+  <!--===== 推薦商品 =====-->
+    <section class="show-box">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2><%= "精选书籍" %></h2>
+          <div class="short-line"></div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="box">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/19' do %><%= image_tag("item_1.jpg") %><% end %>
+              </div>
+              <div class="box">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/24' do %><%= image_tag("item_2.png") %><% end %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/27' do %><%= image_tag("item_3.jpg") %><% end %>
+              </div>
+              <div class="box">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/21' do %><%= image_tag("item_7.jpg") %><% end %>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box three">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/22' do %><%= image_tag("item_5.jpg") %><% end %>
+              </div>
+              <div class="box three">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/20' do %><%= image_tag("item_6.jpg") %><% end %>
+              </div>
+              <!-- <div class="box three">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/25' do %><%= image_tag("item_7.jpg") %><% end %>
+              </div> -->
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/26' do %><%= image_tag("item_8.jpg") %><% end %>
+              </div>
+              <div class="box">
+                <%= link_to 'https://j-and-a-select.herokuapp.com/products/2' do %><%= image_tag("item_9.jpg") %><% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!--===== 立即購買 =====-->
+    <section class="push-box">
+      <%= link_to(t('立即购买'), products_path, class:'btn btn-push' ) %>
 <!--===== 立即購買 =====-->
   <section class="push-box">
     <%= link_to(t('立即购买'), products_path, class:'btn btn-push' ) %>
