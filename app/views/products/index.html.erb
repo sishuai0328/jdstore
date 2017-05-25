@@ -16,24 +16,25 @@
     </li>
   </ul>
 </div>
-
-<div class="container all-product-box">
-  <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3 text-center product-list-style">
-      <% link_to product_path(product) %>
-      <% if product.photos.present? %>
-    <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
-    <% else %>
-      <%= link_to image_tag("http://placehold.it/200x200&text=No Pic", class: "pproduct-list-style-img img-responsive center-block"), product_path(product) %>
-      <% end %>
-      <br>
-      <%= link_to(product.title, product_path(product)) %>
-      <br>
-      <strong>￥
-        <%= link_to(product.price, product_path(product)) %></strong>
-    </p>
+<br>
+<hr>
+<div class="row">
+  <div class="container">
+    <section id="indexlist">
+      <div class="product-list col-md-12 col-centered">
+        <% @products.each do |product| %>
+          <div class="product-content col-xs-6 col-md-3">
+            <% link_to product_path(product) %>
+            <% if product.photos.present? %>
+          <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+          <% else %>
+            <%= link_to image_tag("http://placehold.it/200x200&text=No Pic", class: "pproduct-list-style-img img-responsive center-block"), product_path(product) %>
+            <% end %>
+            <p style="float:left"><%= link_to(product.title, product_path(product)) %></p>
+            <p style="float:right">￥<%= product.price %></p>
+          </div>
+        <% end %>
+      </div>
+    </section>
   </div>
-  <% end %>
-</div>
 </div>
