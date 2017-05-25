@@ -16,6 +16,13 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def destroy
+      @product = Product.find(params[:id])
+      @product.destroy
+      flash[:alert] = " product deleted"
+      redirect_to  :back
+    end
+
   def update
     @product = Product.find(params[:id])
 
@@ -40,6 +47,7 @@ end
     @product = Product.new
     @photo = @product.photos.build #for multi-pics
   end
+
 
   def create
     @product = Product.new(product_params)
