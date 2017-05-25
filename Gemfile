@@ -45,6 +45,7 @@ gem 'letter_opener', group: :development
 gem 'aasm'
 gem 'ransack'
 gem 'rails-erd'
+gem 'will_paginate'
 
 
 group :development, :test do
