@@ -3,29 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
  /* ===商品列表开始===  */
- #indexlist{
-
- .product-list{
-   min-height: 500px;
-
- }
- .product-list .product-content{
-   margin-top: 30px;
-   float: left;
-   margin: 0 auto;
-   border: 2px solid #E0E0E0;
-   box-shadow: 1px 1px 1px #BDBDBD;
-   margin-top: 20px;
-   margin-bottom: 40px;
-   i{
-     font-size: 10px;
-     color: #FFFFFF;
-     border: 1px;
-     background-color: #29B6F6;
-   }
- }
- }
- /*--content--*/
  .content-top h1{
  	color:#000;
  	font-size: 3em;
@@ -95,3 +72,4 @@
    -moz-transition: 0.5s all;
    -ms-transition: 0.5s all;
  }
+ /* ===商品列表结束===  */
