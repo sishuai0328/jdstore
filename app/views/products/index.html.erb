@@ -1,4 +1,24 @@
-<!--content-->
+<!--排序-->
+<div class="dropdown clearfix pull-left">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    排序
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+    <li>
+      <%= link_to("价格从高到底", products_path(:order => "by_lower_bound")) %>
+    </li>
+    <li>
+      <%= link_to("价格从低到高", products_path(:order => "by_upper_bound")) %>
+
+    </li>
+    <li>
+      <%= link_to("最近发布", products_path ) %>
+    </li>
+  </ul>
+</div>
+<br>
+<!--商品列表-->
 <div class="content">
 	<div class="container">
 		<div class="content-top">
