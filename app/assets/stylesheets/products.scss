@@ -25,3 +25,73 @@
    }
  }
  }
+ /*--content--*/
+ .content-top h1{
+ 	color:#000;
+ 	font-size: 3em;
+ 	font-family: 'OleoScript-Regular';
+ 	text-align: center;
+ 	margin: 0 0 1em;
+ }
+ .col-md2{
+   margin-top: 40px;
+ }
+ .col-md1 img{
+ 	margin: 0 auto;
+ }
+ .col-md1 h3 {
+   	font-size: 1.2em;
+   	line-height: 1.1em;
+   	font-family: 'OleoScript-Regular';
+   	text-align: center;
+   	margin: 0 0 0.7em;
+   	color: #000;
+ }
+ .col-md1 h3 a{
+   	color: #000;
+ 	text-decoration: none;
+ }
+ .price h5{
+ 	float: left;
+ 	color:#000;
+ 	font-size: 1.5em;
+ 	margin-top: 3px;
+ }
+ .price a {
+     color: #FFF;
+   font-size: 0.9em;
+   display: block;
+   float: right;
+   background-color: #52D0C4;
+   padding: 0.3em 0.6em;
+   border-radius: 3px;
+   text-decoration: none;
+ }
+ .content-top {
+   padding: 4em 0;
+ }
+ .content-top1 {
+   padding: 2em 0;
+ }
+ .col-md1 {
+   border: 1px solid #CACACA;
+   padding: 1em;
+   border-bottom:5px solid #52D0C4;
+ }
+ .col-md1:hover {
+   border: 1px solid #000;
+   border-bottom: 5px solid #000;
+   transition: 0.5s all;
+   -webkit-transition: 0.5s all;
+   -o-transition: 0.5s all;
+   -moz-transition: 0.5s all;
+   -ms-transition: 0.5s all;
+ }
+ .col-md1:hover .price a {
+   background-color: #000;
+   transition: 0.5s all;
+   -webkit-transition: 0.5s all;
+   -o-transition: 0.5s all;
+   -moz-transition: 0.5s all;
+   -ms-transition: 0.5s all;
+ }

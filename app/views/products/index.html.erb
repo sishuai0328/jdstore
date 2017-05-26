@@ -1,3 +1,40 @@
+<!--content-->
+<div class="content">
+	<div class="container">
+		<div class="content-top">
+			<h1>Recent Products</h1>
+			<div class="content-top1">
+        <% @products.each do |product| %>
+				<div class="col-md-3 col-md2">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.html">
+              <%= link_to product_path(product) do%>
+                <% if product.photos.present? %>
+                  <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/200x200&text=No Pic", class: "pproduct-list-style-img img-responsive center-block"), product_path(product) %>
+                <% end %>
+              <% end %>
+						</a>
+						<h3><a href="single.html"><%= link_to(product.title, product_path(product)) %></a></h3>
+						<div class="price">
+								<h5 class="item_price">$<%= product.price %></h5>
+								<p href="#" class="item_add">
+                  <%= link_to("加入购物车", add_to_cart_product_path(product), method: :post) %>
+                </p>
+								<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+        <% end %>
+			<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//content-->
+
+<!--旧版本
 <div class="dropdown clearfix pull-left">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     排序
@@ -38,3 +75,4 @@
     </section>
   </div>
 </div>
+-->
