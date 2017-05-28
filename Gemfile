@@ -48,6 +48,9 @@ gem 'rails-erd'
 gem 'will_paginate'
 # 文本编辑器支持gem
 gem 'rails_kindeditor'
+gem 'carrierwave-qiniu'
+gem 'qiniu-rs'
+
 
 
 group :development, :test do
