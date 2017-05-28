@@ -228,6 +228,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
+  execjs
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
@@ -252,4 +253,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.14.6
+   1.15.0
