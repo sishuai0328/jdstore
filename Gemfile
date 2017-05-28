@@ -46,6 +46,8 @@ gem 'aasm'
 gem 'ransack'
 gem 'rails-erd'
 gem 'will_paginate'
+# 文本编辑器支持gem
+gem 'rails_kindeditor'
 
 
 group :development, :test do

@@ -13,9 +13,10 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require kindeditor
 //= require turbolinks
 //= require bootstrap
-
+//= require kindeditor/kindeditor.js
 //= require_tree .
 
 /*===== Welcome#index - 首頁導航列變化 =====*/

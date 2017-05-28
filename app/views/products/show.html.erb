@@ -106,6 +106,7 @@
 
         <div class="tab-content">
             <div class="product-particulars-box row tab-pane active" id="tab_default_1">
+             <%= simple_format(@product.particulars) %>
             </div>
             <div class="product-particulars-box row tab-pane" id="tab_default_2">
             <%= simple_form_for ([@product, @review]) do |f| %>
