@@ -143,6 +143,33 @@ color: #eb5424 !important;
     height: 2px;
     position: relative;
 }
+/*===== Story 首页-品牌故事 =====*/
+.story-box {
+  text-align: center;
+  padding: 25px 62.5px 50px 62.5px;
+
+  h3 {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  p {
+    color: #666;
+    line-height: 30px;
+    text-align: justify;
+  }
+
+  img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  hr {
+    height: 1.5px;
+    background-color: #999;
+  }
+}
+
 /*===== Show 首页-推荐商品 =====*/
 .show-box {
   text-align: center;
