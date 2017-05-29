@@ -24,25 +24,29 @@
      margin: 0 auto;
  }
 
- body, html {
-     height: 100%;
+html{
+  height: 100%;
+}
+ body {
+     min-height: 100%;
+     display: flex;                                      // footer固定底部
+     flex-direction: column;                             // footer固定底部
      line-height: 1.8em;
      letter-spacing: 0.1em;
      font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,STHeitiSC-Light,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+     .content {
+           flex: 1;
+         }                                          // footer固定底部
  }
  /* ===navbar开始===  */
  .navbar {
-background: rgba(0, 0, 0, 0.3);
+background: rgba(0, 0, 0, 0.5);
 border: none;
 border-color: transparent;
- a:hover,
- a:active,
- a:focus {
-color: #eb5424 !important;
- }
+
 
  &.show_bgcolor {
-   background-color: #02061A;
+   background: #f5f5f5;
    border: none;
    border-color: transparent;
  }
@@ -50,34 +54,27 @@ color: #eb5424 !important;
        margin-left: 9%;
        a {
          font-size: 20px;
-         color: #fff;
-         transition: 0.35s;
+         color: #666;                                      // 链接反转的样式
+         transition: 0.5s;
        }
        a:hover {
          color: #D0CFCE;
        }
      }
-     .navbar-nav li a {
-       color: #fff;
-       font-size: 16px;
-       transition: 0.35s;
-     }
-     .navbar-nav li a:hover {
-       color: #D0CFCE;
-       text-decoration: none
-     }
 
-     .navbar-nav .dropdown-menu {
-       padding-bottom: 0;
-       padding-top: 0;
-       a {
-         text-align: center;
-         color: #000;
-       }
-       li.divider:last-child {
-         display: none;
-       }
-     }
+     .li-style {
+        color: #666;                                        // 修改全站的 字体主色
+        font-size: 0.8em;
+        a {                                                 // 所有a标签统一样式
+          color: #666;                                      // 链接反转的样式
+          transition: 0.5s;                                 // 鼠标移开时 0.5秒渐变
+        }
+        a:hover {
+          color: #7f8c8d;
+          transition: 0.5s;                                 // 鼠标指向时 0.5面渐变
+          text-decoration: none;                            // 移除下划线
+        }
+      }
     }
 
  /* search */
@@ -85,7 +82,7 @@ color: #eb5424 !important;
    padding: 3px 22px 3px 2px;
    width: 250px;
    height: 30px;
-   background: #faf6ec;
+   background: white;
    color: #808080;
    outline: 0;
    border: none;
@@ -100,12 +97,7 @@ color: #eb5424 !important;
    margin-left: -40px;
  }
 
- /* banner */
 
- .tupian{
-   width: 50px;
-   height:50px;
- }
 /*===== welcome ====*/
 #head-section, #content-section-1, #content-section-2, #content-section-3 {
 	position: relative;
@@ -143,7 +135,32 @@ color: #eb5424 !important;
     height: 2px;
     position: relative;
 }
-/*===== Story 首页-品牌故事 =====*/
+// 中间区域介绍内容样式
+ .landing-page-mid {                                   //给图片整好形
+   height: 434px;
+   background-size: cover;                             //确保图片完全撑开
+   background-position: center center;
+   background-repeat: no-repeat;
+  //  background-image: url(http://img01.taopic.com/160801/318754-160P123523110.jpg);
+   background-image: url("dingyi.png");
+ }
+ .landing-page-mid .tagline {                          //编写标题样式
+   text-align: center;
+   color: #7f8c8d;
+   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+   font-size: 1.6em;
+   margin-top: 3.2em;
+ }
+ .landing-page-mid .tagp {                             //编写内容样式
+   text-align: center;
+   color: #666;
+   font-size: 1.2em;
+   margin-top: 2.5em;
+   line-height: 2.5em;                                 //行间距也要拉开大一些
+   letter-spacing: 0.18em;                             //把字间距撑开，视觉感更优雅
+ }
+
+/*===== Story 首页-用户故事 =====*/
 .story-box {
   text-align: center;
   padding: 25px 62.5px 50px 62.5px;
@@ -564,4 +581,8 @@ color: #eb5424 !important;
     position: relative;
     background: #000000;
     margin-top: -20px;
+}
+.flash{
+  
+  background: transparent;
 }

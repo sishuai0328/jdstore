@@ -22,7 +22,7 @@
 /*===== Welcome#index - 首頁導航列變化 =====*/
 $(window).scroll(function () {
 	var $navbar = $('#navbar')
-	if ($(this).scrollTop() > 125) {
+	if ($(this).scrollTop() > 500) {
 		$('#navbar').addClass('show_bgcolor')
 	} else {
 		$('#navbar').removeClass('show_bgcolor')
