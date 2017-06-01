@@ -14,7 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require kindeditor
-//= require turbolinks
+
 //= require bootstrap
 //= require kindeditor/kindeditor.js
 //= require_tree .
@@ -39,3 +39,15 @@ $(document).on('mouseover', '.list-image', function () {
   $('.list-image').removeClass('list-image-active') //其他圖片移除鎖定狀態
   $(this).addClass('list-image-active') //當前圖片新增鎖定狀態
 })
+
+$(document).ready(function() {
+	$('#myCarousel').carousel({
+	interval: 5000
+	})
+
+    $('#myCarousel').on('slid.bs.carousel', function() {
+    	//alert("slid");
+	});
+
+
+});
