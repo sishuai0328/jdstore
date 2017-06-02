@@ -353,18 +353,16 @@
 
 }
 /* recommended products */
-#hot-products{
-  background-color: #faf6ec;
-}
+
 #hot-products{
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
 .product-card-block{
- box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+ // box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
  .img-block{
-  border:2px solid #fff;
+  //border:2px solid #fff;
   img{
     width:100%;
     height:100%;

@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
 
   def index
+    if params[:category].present?
+      @category_id = Category.find_by(name: params[:category]).id
+      @products = Product.where(category_id: @category_id)
+     # 排序功能
+    else
     @products = case params[:order]
             when 'by_lower_bound'
               Product.order('price DESC')
@@ -9,7 +14,7 @@ class ProductsController < ApplicationController
             else
               Product.order('created_at DESC')
             end
-
+    end
     if params[:search]
       @products = Product.search(params[:search])
     end

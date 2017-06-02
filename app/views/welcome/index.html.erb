@@ -249,8 +249,9 @@
 <div class="row show-box" id="hot-products">
 
   <div class="module-name decorative">
-    <h2>热门商品</h2>
+    <h2 class="text-center">热门商品</h2>
     <div class="short-line"></div>
+    <br>
   </div>
   <div class="container" style="margin-bottom:60px;">
       <div class="col-md-offset-1 col-md-10">
@@ -271,9 +272,9 @@
                                     <% end %>
                                     <% end %>
                                   </div>
-                                  <div class="info-block">
+                                  <div class="info-block ">
                                     <p >
-                                      <span  style="margin-left:-120px;"class="price" >￥ <%= @p1.price %> </span>
+                                      <span  class="price" >￥ <%= @p1.price %> </span>
                                       <span class="like pull-right">
                                         <% if user_signed_in? %>
                                           <% if !current_user.is_favorite_of?(@p1) %>
