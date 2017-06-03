@@ -17,6 +17,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+ @import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
+
 
  //------Common------//
  .col-centered{
@@ -28,27 +30,43 @@ html{
   height: 100%;
 }
  body {
+   margin-top: -50px;
      min-height: 100%;
      display: flex;                                      // footer固定底部
      flex-direction: column;                             // footer固定底部
      line-height: 1.8em;
      letter-spacing: 0.1em;
-     font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,STHeitiSC-Light,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+      font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
+     //font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,STHeitiSC-Light,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
      .content {
            flex: 1;
-         }                                          // footer固定底部
- }
+         }
+  a {                                                 // 所有a标签统一样式
+  color: #666;                                      // 链接反转的样式
+  transition: 0.5s;                                 // 鼠标移开时 0.5秒渐变
+   }
+   a:hover {
+  color: #7f8c8d;
+  transition: 0.5s;                                 // 鼠标指向时 0.5面渐变
+  text-decoration: none;                            // 移除下划线
+      }
+}
+
  /* ===navbar开始===  */
+
  .navbar {
-background: rgba(0, 0, 0, 0.5);
+background: rgba(0, 0, 0, 0.1);
 border: none;
 border-color: transparent;
-
-
+.navbar-brand {
+    letter-spacing: 0.1em;                              //拉开一点点字间距
+    font-weight:lighter;                                   //字体粗细比默认样式缩小100磅值，让logo显得精致高级
+  }
  &.show_bgcolor {
    background: #f5f5f5;
    border: none;
    border-color: transparent;
+
  }
      .navbar-header {
        margin-left: 9%;
@@ -135,67 +153,7 @@ border-color: transparent;
     height: 2px;
     position: relative;
 }
-// 中间区域介绍内容样式
- .landing-page-mid {                                   //给图片整好形
-   height: 434px;
-   background-size: cover;                             //确保图片完全撑开
-   background-position: center center;
-   background-repeat: no-repeat;
-  //  background-image: url(http://img01.taopic.com/160801/318754-160P123523110.jpg);
-   background-image: url("dingyi.png");
- }
- .landing-page-mid .tagline {                          //编写标题样式
-   text-align: center;
-   color: #7f8c8d;
-   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
-   font-size: 1.6em;
-   margin-top: 3.2em;
- }
- .landing-page-mid .tagp {                             //编写内容样式
-   text-align: center;
-   color: #666;
-   font-size: 1.2em;
-   margin-top: 2.5em;
-   line-height: 2.5em;                                 //行间距也要拉开大一些
-   letter-spacing: 0.18em;                             //把字间距撑开，视觉感更优雅
- }
- /*===== Categories 首页-商品分类 =====*/
- .categories-box {
-   background-color: white;
-   text-align: center;
 
-   a {
-     text-decoration:none;
-     color: #002E2E;
-   }
-
-   img {
-     width: 300px;
-     height: 300px;
-   }
-
-   /*===== Content 分类內容 =====*/
-   .category-content {
-     padding: 50px 0 0 0;
-
-     /*===== border-right: 2.5px dashed #ccc;=====*/
-     /*===== Box 分类图片 =====*/
-     h3 {
-       padding: 20px 0 20px 0;
-       font-weight: 700;
-       font-size: 18px;
-     }
-
-     p {
-       text-align: justify;
-       letter-spacing: 1.5px;
-       padding: 0 62.5px 50px 62.5px;
-       color: #666;
-       line-height: 26px;
-
-     }
-   }
- }
 /*===== Story 首页-用户故事 =====*/
 .story-box {
   text-align: center;
@@ -226,7 +184,7 @@ border-color: transparent;
 /*===== Show 首页-推荐商品 =====*/
 
 .show-box {
-  
+
   padding: 50px 0 50px 0;
 
   img {

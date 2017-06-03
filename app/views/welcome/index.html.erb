@@ -1,205 +1,190 @@
 <!--==首页轮播图开始==-->
 
-        <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+<!-- ↓↓↓ 大图滚动banner 代码块↓↓↓ -->
+<div class="row">
+  <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <div class="overlay"></div>
 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper For Slides -->
-            <div class="carousel-inner" role="listbox">
-                <!-- Third Slide -->
-                <div class="item active">
-                    <!-- Slide Background -->
-                  <img height="650px;" src="<%= image_url 'shouye1.jpg' %>">
-                    <div class="bs-slider-overlay"></div>
+    <!-- 默认三张图列表 -->
+    <div class="banner">
+      <ul class="carousel-indicators ">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+      </ul>
+    </div>
 
-                    <div class="container">
-                        <div class="row">
-                            <!-- Slide Text Layer -->
-                            <div class="slide-text slide_style_left" >
-                                <!-- <h1 data-animation="animated zoomInRight">邂逅一本书</h1> -->
-                                <p style="margin-top:-100px" data-animation="animated fadeInLeft">趁着青春 还剩几年</p>
-                                <p data-animation="animated fadeInLeft">努力追上梦想的步伐</p>
-                                <p data-animation="animated fadeInLeft">天黑以后 天亮之前</p>
-                                <p data-animation="animated fadeInLeft">设法抹去心底那些疲倦</p>
-                              <!--<a href="/products" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">文学作品</a>-->
-                              <!--<a href="/products" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">散文小说</a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Slide -->
+    <!-- 文案部分 -->
+    <div class="carousel-inner">
+      <div class="item slides active">
+        <div class="slide-1"></div>
+        <div class="hero row">
+          <hgroup>
+            <h1>极简生活法</h1>
+            <h3>这是一套能快速提升生活品质的方法，只需动手即可打造自己的完美家居</h3>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+        </div>
+      </div>
+      <div class="item slides">
+        <div class="slide-2"></div>
+        <div class="hero">
+          <hgroup>
+            <h1>从此告别凌乱</h1>
+            <h3>过有序的生活 找到真实的自己</h3>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+        </div>
+      </div>
+      <div class="item slides">
+        <div class="slide-3"></div>
+        <div class="hero">
+          <hgroup>
+            <h1>拥有杂志级的家</h1>
+            <h3>高效的套路让空间快速变身，人人都能成为软装设计师</h3>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+        </div>
+      </div>
 
-                <!-- Second Slide -->
-                <div class="item">
-                    <!-- Slide Background -->
-                  <img height="650px;" src="<%= image_url 'shouye2.jpg' %>">
-                    <div class="bs-slider-overlay"></div>
-                    <!-- Slide Text Layer -->
-                    <div class="slide-text slide_style_center">
-                        <!-- <h1 data-animation="animated flipInX">午后阳光</h1> -->
-                        <p data-animation="animated lightSpeedIn">少年后来渐渐明白了此行的意义</p>
-                        <p data-animation="animated lightSpeedIn">那些过不去的心结仿佛都能打开了</p>
-                        <p data-animation="animated lightSpeedIn">结冰的湖面上开始有了细微的碎裂痕迹</p>
-                        <p data-animation="animated lightSpeedIn">你听到春天的声音了吗</p>
-                        <!--<a href="/products" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">传记文学</a>-->
-                        <!--<a href="/products" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">自我管理</a>-->
-                    </div>
-                </div>
-                <!-- End of Slide -->
+    </div>
+    <!--===== 換頁按鈕 =====-->
+    <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
+      <span class="fa fa-angle-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#intro" role="button" data-slide="next">
+      <span class="fa fa-angle-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 
-                <!-- Third Slide -->
-                <div class="item">
-                    <!-- Slide Background -->
-
-                  <img height="650px;" src="<%= image_url 'shouye3.jpg' %>">
-                    <div class="bs-slider-overlay"></div>
-                    <!-- Slide Text Layer -->
-                    <div class="slide-text slide_style_right">
-                        <p style="margin-top:-100px" data-animation="animated fadeInRight">你来了 你走了</p>
-                        <p data-animation="animated fadeInRight">你又来了 你又走了</p>
-                        <p data-animation="animated fadeInRight">繁华都市 陌生街口</p>
-                        <p data-animation="animated fadeInRight">你好！ 再见！</p>
-                        <!--<a href="/products" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">科幻小说</a>-->
-                        <!--<a href="/products" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">历史</a>-->
-                    </div>
-                </div>
-                <!-- End of Slide -->
-
-
-            </div><!-- End of Wrapper For Slides -->
-            <!-- Left Control -->
+<!-- </div>
             <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
                 <span class="fa fa-angle-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-
-            <!-- Right Control -->
             <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
                 <span class="fa fa-angle-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div> <!-- End  bootstrap-touch-slider Slider -->
+        </div>  -->
 <!--==首页轮播图结束==-->
 
 <!--==首页轮播图js开始==-->
-          <!-- Script to Activate the Carousel -->
-             <script>
-             $('.carousel').carousel({
-                 interval: 5000 //changes the speed
-             })
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel').carousel({
+    interval: 5000 //changes the speed
+  })
 
-             $('#bootstrap-touch-slider').bsTouchSlider();
+  $('#bootstrap-touch-slider').bsTouchSlider();
+</script>
 
-             </script>
-
-            <script>
-             $(document).ready(function () {
-             $('.material-button-toggle').click(function () {
-                 $(this).toggleClass('open');
-                 $('.option').toggleClass('scale-on');
-             });
-            });
-           </script>
+<script>
+  $(document).ready(function () {
+    $('.material-button-toggle').click(function () {
+      $(this).toggleClass('open');
+      $('.option').toggleClass('scale-on');
+    });
+  });
+</script>
 <!--==首页轮播js结束==-->
-   <!--==首页第二部分==-->
-  <!-- <div class="row">
-     <div class="landing-page-mid">
-       <div class="container">
-         <div class="row">
-           <div class="col-md-12">
-             <h3 class="tagline text-center">让知识流动起来 你准备好了吗</h1>
-               <p class="col-md-6 col-md-offset-3 text-center tagp">
-                 我们不是只想简简单单的做一个交易平台，<br>
-                 这一次我们想做的更多、更好，需要更多的人参与进来，
-                 来易书小站传递你的思想的火花。</p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>-->
-  <!--==首页第二部分==-->
-  <!--===== 用户故事故事 =====-->
-    <section class="story-box">
+<!--==首页第二部分==-->
+<div class="row">
+  <div class="landing-page-mid">
+    <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h2><%= "用户故事" %></h2>
-          <div class="short-line"></div>
-          <div class="row">
-            <div class="col-md-3 col-md-offset-1">
-              <%= image_tag("user1.jpg") %>
-            </div>
-            <div class="col-md-7">
-              <h3><%= t('th-jimmy') %></h3>
-              <p>也许人生就是在不断的错过,一些人一些事。因为一个偶然的机会我和易书小站不期而遇了，便发自内心地喜欢上它了。在这里，远离城市的喧嚣、街头的霓虹，挑一本书，在跳跃的书香里寻找心灵片刻的宁静，成为我为数不多的爱好之一。</p>
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-md-7 col-md-offset-1">
-              <h3><%= t('th-anndo') %></h3>
-              <p>邂逅一个人，邂逅一本书。易书小站为我们提供了一个专业的书籍交易平台，你既可以在上面挑选到别人精心推荐的书籍，也可以上架自己想交易的书籍。写书评、写心得，和大多数人来一场思想上的碰撞。</p>
-            </p>
-            </div>
-            <div class="col-md-3">
-              <%= image_tag("user2.jpg") %>
-            </div>
-          </div>
+        <div class="col-md-12">
+          <h3 class="tagline text-center">让知识流动起来 你准备好了吗</h1>
+          <p class="col-md-6 col-md-offset-3 text-center tagp">
+            我们不是只想简简单单的做一个交易平台，<br>
+            这一次我们想做的更多、更好，需要更多的人参与进来， 来易书小站传递你的思想的火花。</p>
         </div>
       </div>
-    </section>
-    <!--===== 商品類型 =====-->
-  <section class="categories-box">
-    <div class="row">
-
-<div class="col-md-10 col-md-offset-1">
-  <h2><%= "精彩分类" %></h2>
-  <div class="short-line"></div>
+    </div>
+  </div>
+</div>
+<!--==首页第二部分==-->
+<!--===== 用户故事故事 =====-->
+<section class="story-box">
   <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2><%= "用户故事" %></h2>
+      <div class="short-line"></div>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+          <%= image_tag("user1.jpg") %>
+        </div>
+        <div class="col-md-7">
+          <h3><%= t('th-jimmy') %></h3>
+          <p>也许人生就是在不断的错过,一些人一些事。因为一个偶然的机会我和易书小站不期而遇了，便发自内心地喜欢上它了。在这里，远离城市的喧嚣、街头的霓虹，挑一本书，在跳跃的书香里寻找心灵片刻的宁静，成为我为数不多的爱好之一。</p>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-md-7 col-md-offset-1">
+          <h3><%= t('th-anndo') %></h3>
+          <p>邂逅一个人，邂逅一本书。易书小站为我们提供了一个专业的书籍交易平台，你既可以在上面挑选到别人精心推荐的书籍，也可以上架自己想交易的书籍。写书评、写心得，和大多数人来一场思想上的碰撞。</p>
+        </p>
+      </div>
+      <div class="col-md-3">
+        <%= image_tag("user2.jpg") %>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!--===== 商品類型 =====-->
+<section class="categories-box">
+<div class="row">
+
+  <div class="col-md-10 col-md-offset-1">
+    <h2><%= "精彩分类" %></h2>
+    <div class="short-line"></div>
+    <div class="row">
       <div class="col-md-4 category-content">
 
         <%= link_to 'https://j-and-a-select.herokuapp.com/products?group=%E6%97%A5%E5%B8%B8%E6%96%87%E5%85%B7' , class: "category_1" do %>
-          <div class="category-box">
-            <%= image_tag("category_1.jpg") %>
-          </div>
-          <div>
-            <h3><%= "专业书籍" %></h3>
-            <p><%= t('slogan-desk') %></p>
-          </div>
+        <div class="category-box">
+          <%= image_tag("category_1.jpg") %>
+        </div>
+        <div>
+          <h3><%= "专业书籍" %></h3>
+          <p><%= "这里面有着海量的专业书籍，涵盖会计、自动化、计算机、英语、电信等专业，从大一、大二、大三到大四所需到专业书籍应有尽有。你不仅可以淘到所需要到书籍，还可以上架闲置到专业书籍帮助你到学弟学妹们，同时为自己换取额外到收入。" %></p>
+        </div>
         <% end %>
       </div>
       <div class="col-md-4 category-content">
         <%= link_to 'https://j-and-a-select.herokuapp.com/products?group=%E7%94%9F%E6%B4%BB%E5%99%A8%E7%89%A9' , class: "category_2" do %>
-          <div class="category-box">
-            <%= image_tag("category_2.jpg") %>
-          </div>
-          <div>
-            <h3><%= t('th-home') %></h3>
-            <p><%= t('slogan-home') %></p>
-          </div>
+        <div class="category-box">
+          <%= image_tag("category_2.jpg") %>
+        </div>
+        <div>
+          <h3><%= "精彩读物" %></h3>
+          <p><%= "偶尔专业，偶尔业余。如果你想购买科幻小说、文学作品、经济周刊等等，或者你有闲置的畅销书籍、课外读物等等要出售，我们都能满足要求。我们鼓励大家多买书、多看书、多看“闲书”，通过这个平台让知识流动起来。" %></p>
+        </div>
         <% end %>
       </div>
       <div class="col-md-4 category-content">
         <%= link_to 'https://j-and-a-select.herokuapp.com/products?group=%E5%80%8B%E4%BA%BA%E5%96%AE%E5%93%81' , class: "category_3" do %>
-          <div class="category-box">
-            <%= image_tag("category_3.jpg") %>
-          </div>
-          <div>
-            <h3><%= t('th-accessories') %></h3>
-            <p><%= t('slogan-accessories') %></p>
-          </div>
+        <div class="category-box">
+          <%= image_tag("category_3.jpg") %>
+        </div>
+        <div>
+          <h3><%= "私人收藏" %></h3>
+          <p><%= "除了书，我们也许还可以干点别的。为了更好的地满足大学生的生活需求，平时不用的闲置物品如铅笔、风扇、书桌、散热器。。。请都统统拿出来交易。" %></p>
+        </div>
         <% end %>
       </div>
     </div>
-    </div>
-    </div>
-  </section>
+  </div>
+</div>
+</section>
 
-  <!--===== 推薦商品 =====-->
-    <section class="show-box">
+<!--===== 推薦商品 =====-->
+<!-- <section class="show-box">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h2><%= "精选书籍" %></h2>
@@ -231,7 +216,7 @@
               <!-- <div class="box three">
                 <%= link_to 'https://j-and-a-select.herokuapp.com/products/25' do %><%= image_tag("item_7.jpg") %><% end %>
               </div> -->
-            </div>
+<!-- </div>
             <div class="col-md-3">
               <div class="box">
                 <%= link_to 'https://j-and-a-select.herokuapp.com/products/26' do %><%= image_tag("item_8.jpg") %><% end %>
@@ -243,327 +228,342 @@
           </div>
         </div>
       </div>
-    </section>
-	<!-- hot-products -->
+    </section>  -->
+<!-- hot-products -->
 
 <div class="row show-box" id="hot-products">
 
-  <div class="module-name decorative">
-    <h2 class="text-center">热门商品</h2>
-    <div class="short-line"></div>
-    <br>
-  </div>
+<div class="module-name decorative">
+  <h2 class="text-center">热门商品</h2>
+  <div class="short-line"></div>
+  <br></div>
   <div class="container" style="margin-bottom:60px;">
-      <div class="col-md-offset-1 col-md-10">
-              <div id="myCarousel" class="carousel slide">
+    <div class="col-md-offset-1 col-md-10">
+      <div id="myCarousel" class="carousel slide">
 
-                  <!-- Carousel items -->
-                  <div class="carousel-inner">
-                      <div class="item active">
-                          <div class="row">
-                              <div class="col-sm-3">
-                                <div class="product-card-block">
-                                  <div class="img-block">
-                                    <%= link_to product_path(@p1) do %>
-                                    <% if @p1.photos.present? %>
-                                        <%= image_tag(@p1.photos[0].avatar.thumb.url) %>
-                                    <% else %>
-                                      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                    <% end %>
-                                    <% end %>
-                                  </div>
-                                  <div class="info-block ">
-                                    <p >
-                                      <span  class="price" >￥ <%= @p1.price %> </span>
-                                      <span class="like pull-right">
-                                        <% if user_signed_in? %>
-                                          <% if !current_user.is_favorite_of?(@p1) %>
-                                            <%= link_to favorites_product_path(@p1), :class => "like ",  method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p1.collectors.count %>
-                                            <% end %>
-                                          <% else %>
-                                            <%= link_to unfavorite_product_path(@p1), :class => "unlike ",method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p1.collectors.count %>
-                                            <% end %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to favorites_product_path(@p1), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p1.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      </span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="product-card-block">
-                                  <div class="img-block">
-                                    <%= link_to product_path(@p2) do %>
-                                    <% if @p2.photos.present? %>
-                                        <%= image_tag(@p2.photos[0].avatar.thumb.url) %>
-                                    <% else %>
-                                      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                    <% end %>
-                                    <% end %>
-                                  </div>
-                                  <div class="info-block ">
-                                    <p >
-                                      <span  class="price" >￥ <%= @p2.price %> </span>
-                                      <span class="like pull-right">
-                                        <% if user_signed_in? %>
-                                          <% if !current_user.is_favorite_of?(@p2) %>
-                                            <%= link_to favorites_product_path(@p2), :class => "like ",  method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p2.collectors.count %>
-                                            <% end %>
-                                          <% else %>
-                                            <%= link_to unfavorite_product_path(@p2), :class => "unlike ",method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p2.collectors.count %>
-                                            <% end %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to favorites_product_path(@p2), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p2.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      </span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="product-card-block">
-                                  <div class="img-block">
-                                    <%= link_to product_path(@p3) do %>
-                                    <% if @p3.photos.present? %>
-                                        <%= image_tag(@p3.photos[0].avatar.thumb.url) %>
-                                    <% else %>
-                                      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                    <% end %>
-                                    <% end %>
-                                  </div>
-                                  <div class="info-block">
-                                    <p >
-                                      <span  class="price" >￥ <%= @p3.price %> </span>
-                                      <span class="like pull-right">
-                                        <% if user_signed_in? %>
-                                          <% if !current_user.is_favorite_of?(@p3) %>
-                                            <%= link_to favorites_product_path(@p3), :class => "like ",  method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p3.collectors.count %>
-                                            <% end %>
-                                          <% else %>
-                                            <%= link_to unfavorite_product_path(@p3), :class => "unlike ",method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p3.collectors.count %>
-                                            <% end %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to favorites_product_path(@p3), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p3.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      </span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="product-card-block">
-                                  <div class="img-block">
-                                    <%= link_to product_path(@p4) do %>
-                                    <% if @p4.photos.present? %>
-                                        <%= image_tag(@p4.photos[0].avatar.thumb.url) %>
-                                    <% else %>
-                                      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                    <% end %>
-                                    <% end %>
-                                  </div>
-                                  <div class="info-block">
-                                    <p >
-                                      <span  class="price" >￥ <%= @p4.price %> </span>
-                                      <span class="like pull-right" >
-                                        <% if user_signed_in? %>
-                                          <% if !current_user.is_favorite_of?(@p4) %>
-                                            <%= link_to favorites_product_path(@p4), :class => "like ",  method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p4.collectors.count %>
-                                            <% end %>
-                                          <% else %>
-                                            <%= link_to unfavorite_product_path(@p4), :class => "unlike ",method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p4.collectors.count %>
-                                            <% end %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to favorites_product_path(@p4), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p4.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      </span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                          </div>
-                          <!--/row-->
-                      </div>
-                      <!--/item-->
-                      <div class="item">
-                          <div class="row">
-                              <div class="col-sm-3"><div class="product-card-block">
-                                <div class="img-block">
-                                  <%= link_to product_path(@p5) do %>
-                                  <% if @p5.photos.present? %>
-                                      <%= image_tag(@p5.photos[0].avatar.thumb.url) %>
-                                  <% else %>
-                                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                  <% end %>
-                                  <% end %>
-                                </div>
-                                <div class="info-block">
-                                  <p >
-                                    <span  class="price" >￥ <%= @p5.price %> </span>
-                                    <span class="like pull-right">
-                                      <% if user_signed_in? %>
-                                        <% if !current_user.is_favorite_of?(@p5) %>
-                                          <%= link_to favorites_product_path(@p5), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p5.collectors.count %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to unfavorite_product_path(@p5), :class => "unlike ",method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p5.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      <% else %>
-                                        <%= link_to favorites_product_path(@p5), :class => "like ",  method: :post do %>
-                                          <i class="fa fa-heart fa-lg"></i><%= @p5.collectors.count %>
-                                        <% end %>
-                                      <% end %>
-                                    </span>
-                                  </p>
-                                </div>
-                              </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="product-card-block">
-                                  <div class="img-block">
-                                    <%= link_to product_path(@p6) do %>
-                                    <% if @p4.photos.present? %>
-                                        <%= image_tag(@p6.photos[0].avatar.thumb.url) %>
-                                    <% else %>
-                                      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                    <% end %>
-                                    <% end %>
-                                  </div>
-                                  <div class="info-block">
-                                    <p >
-                                      <span  class="price" >￥ <%= @p6.price %> </span>
-                                      <span class="like pull-right">
-                                        <% if user_signed_in? %>
-                                          <% if !current_user.is_favorite_of?(@p6) %>
-                                            <%= link_to favorites_product_path(@p6), :class => "like ",  method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p6.collectors.count %>
-                                            <% end %>
-                                          <% else %>
-                                            <%= link_to unfavorite_product_path(@p6), :class => "unlike ",method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p6.collectors.count %>
-                                            <% end %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to favorites_product_path(@p6), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p6.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      </span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="product-card-block">
-                                  <div class="img-block">
-                                    <%= link_to product_path(@p7) do %>
-                                    <% if @p7.photos.present? %>
-                                        <%= image_tag(@p7.photos[0].avatar.thumb.url) %>
-                                    <% else %>
-                                      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                    <% end %>
-                                    <% end %>
-                                  </div>
-                                  <div class="info-block">
-                                    <p >
-                                      <span  class="price" >￥ <%= @p7.price %> </span>
-                                      <span class="like pull-right">
-                                        <% if user_signed_in? %>
-                                          <% if !current_user.is_favorite_of?(@p7) %>
-                                            <%= link_to favorites_product_path(@p7), :class => "like ",  method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p7.collectors.count %>
-                                            <% end %>
-                                          <% else %>
-                                            <%= link_to unfavorite_product_path(@p7), :class => "unlike ",method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p7.collectors.count %>
-                                            <% end %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to favorites_product_path(@p7), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p7.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      </span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-3">
-                                <div class="product-card-block">
-                                  <div class="img-block">
-                                    <%= link_to product_path(@p8) do %>
-                                    <% if @p8.photos.present? %>
-                                        <%= image_tag(@p8.photos[0].avatar.thumb.url) %>
-                                    <% else %>
-                                      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                                    <% end %>
-                                    <% end %>
-                                  </div>
-                                  <div class="info-block">
-                                    <p >
-                                      <span  class="price" >￥ <%= @p8.price %> </span>
-                                      <span class="like pull-right">
-                                        <% if user_signed_in? %>
-                                          <% if !current_user.is_favorite_of?(@p8) %>
-                                            <%= link_to favorites_product_path(@p8), :class => "like ",  method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p8.collectors.count %>
-                                            <% end %>
-                                          <% else %>
-                                            <%= link_to unfavorite_product_path(@p8), :class => "unlike ",method: :post do %>
-                                              <i class="fa fa-heart fa-lg"></i><%= @p8.collectors.count %>
-                                            <% end %>
-                                          <% end %>
-                                        <% else %>
-                                          <%= link_to favorites_product_path(@p8), :class => "like ",  method: :post do %>
-                                            <i class="fa fa-heart fa-lg"></i><%= @p8.collectors.count %>
-                                          <% end %>
-                                        <% end %>
-                                      </span>
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                          </div>
-                          <!--/row-->
-                      </div>
-                      <!--/item-->
-
-
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p1) do %>
+                    <% if @p1.photos.present? %>
+                    <%= image_tag(@p1.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
                   </div>
-                  <!--/carousel-inner-->
-                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-                  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+                  <div class="info-block ">
+                    <p >
+                      <span class="price">￥
+                        <%= @p1.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p1) %>
+                        <%= link_to favorites_product_path(@p1), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p1.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p1), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p1.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p1), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p1.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <!--/myCarousel-->
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p2) do %>
+                    <% if @p2.photos.present? %>
+                    <%= image_tag(@p2.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                  <div class="info-block ">
+                    <p >
+                      <span class="price">￥
+                        <%= @p2.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p2) %>
+                        <%= link_to favorites_product_path(@p2), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p2.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p2), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p2.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p2), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p2.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p3) do %>
+                    <% if @p3.photos.present? %>
+                    <%= image_tag(@p3.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                  <div class="info-block">
+                    <p >
+                      <span class="price">￥
+                        <%= @p3.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p3) %>
+                        <%= link_to favorites_product_path(@p3), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p3.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p3), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p3.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p3), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p3.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p4) do %>
+                    <% if @p4.photos.present? %>
+                    <%= image_tag(@p4.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                  <div class="info-block">
+                    <p >
+                      <span class="price">￥
+                        <%= @p4.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p4) %>
+                        <%= link_to favorites_product_path(@p4), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p4.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p4), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p4.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p4), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p4.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/row-->
+          </div>
+          <!--/item-->
+          <div class="item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p5) do %>
+                    <% if @p5.photos.present? %>
+                    <%= image_tag(@p5.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                  <div class="info-block">
+                    <p >
+                      <span class="price">￥
+                        <%= @p5.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p5) %>
+                        <%= link_to favorites_product_path(@p5), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p5.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p5), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p5.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p5), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p5.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p6) do %>
+                    <% if @p6.photos.present? %>
+                    <%= image_tag(@p6.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                  <div class="info-block">
+                    <p >
+                      <span class="price">￥
+                        <%= @p6.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p6) %>
+                        <%= link_to favorites_product_path(@p6), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p6.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p6), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p6.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p6), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p6.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p7) do %>
+                    <% if @p7.photos.present? %>
+                    <%= image_tag(@p7.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                  <div class="info-block">
+                    <p >
+                      <span class="price">￥
+                        <%= @p7.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p7) %>
+                        <%= link_to favorites_product_path(@p7), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p7.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p7), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p7.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p7), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p7.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-card-block">
+                  <div class="img-block">
+                    <%= link_to product_path(@p8) do %>
+                    <% if @p8.photos.present? %>
+                    <%= image_tag(@p8.photos[0].avatar.thumb.url) %>
+                  <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                  <div class="info-block">
+                    <p >
+                      <span class="price">￥
+                        <%= @p8.price %>
+                      </span>
+                      <span class="like pull-right">
+                        <% if user_signed_in? %>
+                        <% if !current_user.is_favorite_of?(@p8) %>
+                        <%= link_to favorites_product_path(@p8), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p8.collectors.count %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to unfavorite_product_path(@p8), :class => "unlike ",method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p8.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to favorites_product_path(@p8), :class => "like ",  method: :post do %>
+                        <i class="fa fa-heart fa-lg"></i><%= @p8.collectors.count %>
+                        <% end %>
+                        <% end %>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/row-->
+          </div>
+          <!--/item-->
 
+        </div>
+        <!--/carousel-inner-->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
       </div>
+      <!--/myCarousel-->
+
+    </div>
   </div>
 </div>
 
-  <!--===== 立即購買 =====-->
-  <section class="push-box">
-    <%= link_to(t('立即购买'), products_path, class:'btn btn-push' ) %>
-  </section>
+<!--===== 立即購買 =====-->
+<section class="push-box">
+  <%= link_to(t('立即购买'), products_path, class:'btn btn-push' ) %>
+</section>
