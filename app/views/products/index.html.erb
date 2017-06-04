@@ -1,61 +1,38 @@
-<!--排序-->
-<div class="dropdown clearfix pull-left">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    排序
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-    <li>
-      <%= link_to("价格从高到底", products_path(:order => "by_lower_bound")) %>
-    </li>
-    <li>
-      <%= link_to("价格从低到高", products_path(:order => "by_upper_bound")) %>
+<div class="product-box" style="margin-top:150px;">
+  <div class="container">
 
-    </li>
-    <li>
-      <%= link_to("最近发布", products_path ) %>
-    </li>
-  </ul>
-</div>
-<br>
-<!--商品列表-->
-<div class="content">
-	<div class="container">
-		<div class="content-top">
-			<h1>Recent Products</h1>
-			<div class="content-top1">
-        <% @products.each do |product| %>
-				<div class="col-md-3 col-md2">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-              <%= link_to product_path(product) do%>
-                <% if product.photos.present? %>
-                  <%= image_tag(product.photos[0].avatar.thumb.url) %>
-                <% else %>
-                  <%= link_to image_tag("http://placehold.it/200x200&text=No Pic", class: "pproduct-list-style-img img-responsive center-block"), product_path(product) %>
-                <% end %>
-              <% end %>
-						</a>
-						<h3><a href="single.html"><%= link_to(product.title, product_path(product)) %></a></h3>
-						<div class="price">
-								<h5 class="item_price">$<%= product.price %></h5>
-								<p href="#" class="item_add">
-                  <%= link_to("加入购物车", add_to_cart_product_path(product), method: :post) %>
-                </p>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-        <% end %>
-			<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-</div>
-<!--//content-->
+  <% if @products.length > 0 %>
+    <!--=== 商品列表 ===-->
+    <div class='row'>
+      <% @products.each_with_index do |product, index| %>
+        <div class='col-xs-12 col-sm-4 col-md-3 product-content'>
+          <%= link_to product_path(product) do %>
+            <!-- 商品圖片 -->
+            <% if product.photos.present? %>
+              <!-- 顯示第一張圖片 -->
+              <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail1") %>
+            <% else %>
+              <%= image_tag('http://placehold.it/200x200&text=No Pic', class: 'thumbnail1') %>
+            <% end %>
+          <% end %>
+          <div class="product-info">
+            <p><%= link_to(product.title , product_path(product)) %></p>
+            <p><%= render_product_price(product) %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="product-content">
+      <h2><%= (t('no-product-data')) %></h2>
+    </div>
+  <% end %>
 
-<!--旧版本
-<div class="dropdown clearfix pull-left">
+
+  </div>
+</div>
+
+<!-- <div class="dropdown clearfix pull-left">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     排序
     <span class="caret"></span>
@@ -94,5 +71,4 @@
       </div>
     </section>
   </div>
-</div>
--->
+</div> -->
