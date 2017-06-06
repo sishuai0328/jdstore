@@ -52,5 +52,6 @@ Rails.application.routes.draw do
     end
   end
 
+ resources :my_favorites
   root 'welcome#index'
 end
