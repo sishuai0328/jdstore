@@ -1,6 +1,6 @@
 class Admin::ProductsController < ApplicationController
   layout "admin"
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :favorites, :unfavorite]
   before_action :admin_required
 
 
@@ -53,6 +53,7 @@ class Admin::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
     @product.category_id = params[:category_id]
     if @product.save
       if params[:photos] != nil

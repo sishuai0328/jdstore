@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :favorites, :unfavorite]
 
   def index
     if params[:category].present?
