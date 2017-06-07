@@ -53,7 +53,7 @@ class Admin::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    @product.user = current_user
+  
     @product.category_id = params[:category_id]
     if @product.save
       if params[:photos] != nil
