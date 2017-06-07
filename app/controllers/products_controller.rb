@@ -13,12 +13,13 @@ before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destro
             when 'by_upper_bound'
               Product.order('price ASC')
             else
-              Product.order('created_at DESC')
+              Product.where(:is_hidden => false).order('created_at DESC').paginate(:page => params[:page], :per_page => 8)
             end
     end
     if params[:search]
       @products = Product.search(params[:search])
     end
+
   end
 
   def show

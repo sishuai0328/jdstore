@@ -5,7 +5,7 @@ class Admin::ProductsController < ApplicationController
 
 
   def index
-    @products = Product.all
+    @products = current_user.products.all
   end
 
   def show
@@ -53,7 +53,7 @@ class Admin::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-  
+    @product.user = current_user
     @product.category_id = params[:category_id]
     if @product.save
       if params[:photos] != nil
@@ -72,6 +72,6 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :category, :description, :quantity, :price, :image, :particulars, :category_id)
+    params.require(:product).permit(:title, :category, :description, :quantity, :price, :image, :particulars, :category_id, :is_hidden)
   end
 end

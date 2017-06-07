@@ -1021,3 +1021,16 @@ border-color: transparent;
     background: #000000;
     margin-top: -20px;
 }
+/*===== 換頁按鈕設定 ======*/
+ .page-box {
+   margin-top: 75px;
+
+   a {
+     background-color: #eee;
+   }
+
+   a:hover {
+     background-color: #ddd;
+     color: #666 !important;
+   }
+ }

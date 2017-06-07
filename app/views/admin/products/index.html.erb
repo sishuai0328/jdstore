@@ -1,5 +1,5 @@
 <h2>
- 商品列表
+  商品列表
 </h2>
 <div class="pull-right" style="padding-bottom: 20px;">
   <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
@@ -19,6 +19,12 @@
     <% @products.each do |product| %>
     <tr>
       <td>
+        <% if product.is_hidden %>
+        (Hidden)
+      <% else %>
+        (Public)
+        <% end %>
+
         <%= product.id %>
       </td>
       <td>
@@ -37,7 +43,7 @@
         <%= product.price %>
       </td>
       <td>
-        <%= link_to("Edit", edit_admin_product_path(product)) %>
+        <%= link_to("Edit", edit_admin_product_path(product),class: "btn btn-sm btn-default") %>
 
         <%= link_to("Delete",  admin_product_path( product), class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "Are you sure?" } )%>
